@@ -40,7 +40,7 @@ void coswarp(inout vec3 trip, float warpsScale ){
     vec4 modelPosition = modelMatrix * vec4(position, 1.);
        
 
-      // modelPosition.z += (length(modelPosition.xy) * uMousePosition.x) *.2 ;
+      modelPosition.z += sin( length(modelPosition.xy)  *length(uMousePosition.xy)) * 5.;
 
 
   
