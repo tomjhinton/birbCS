@@ -40,7 +40,7 @@ void coswarp(inout vec3 trip, float warpsScale ){
     vec4 modelPosition = modelMatrix * vec4(position, 1.);
        
 
-      modelPosition.z += sin( length(modelPosition.xy)  *length(uMousePosition.xy)) * 5.;
+      modelPosition.z += sin( length(modelPosition.xy)  *length(uMousePosition.xy)) * 4.;
 
 
   
@@ -50,7 +50,7 @@ void coswarp(inout vec3 trip, float warpsScale ){
     vec4 projectionPosition = projectionMatrix * viewPosition;
   
     gl_Position = projectionPosition;
-    gl_PointSize = mix( (350. * (2.-length(modelPosition.xy))) * 1. * 1. , 350., sin(uTime) );
+    gl_PointSize = mix( (250. * (2.-length(modelPosition.xy))) * 1. * 1. , 250., sin(uTime) );
     gl_PointSize *= (1.0/ -viewPosition.z);
 
     vUv = uv;

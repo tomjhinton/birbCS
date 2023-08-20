@@ -16,7 +16,7 @@ function sliceIntoChunks(arr, chunkSize) {
 }
 
 
-let plane = new THREE.PlaneGeometry( 4, 4, 30, 30 );
+let plane = new THREE.PlaneGeometry( 3.5, 3.5, 30, 30 );
 
 
 
